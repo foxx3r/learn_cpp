@@ -49,3 +49,69 @@ The Boolean data type returns just two possible values: **true** (1) and **false
 ```diff
 ! Conditional expressions are an example of Boolean data type.
 ```
+
+# Pointers
+
+Every variable is a **memory** location, which has its **address** defined. 
+
+That address can be accessed using the **ampersand (&)** operator (also called the address-of operator), which denotes an **address in memory**.
+
+**For example:**
+
+```cpp
+int score = 5;
+cout << &score << endl;
+
+//Outputs "0x29fee8"
+```
+
+```diff
+! This outputs the memory address, which stores the variable score.
+```
+
+A pointer is a variable, with the address of another variable as its value.
+
+In C++, pointers help make certain tasks easier to perform. Other tasks, such as dynamic memory allocation, cannot be performed without using pointers.
+
+All pointers share the same data type - a long **hexadecimal** number that represents a memory address.
+
+```diff
+! The only difference between pointers of different data types is the data type of the variable that the pointer points to.
+```
+
+A pointer is a variable, and like any other variable, it must be declared before you can work with it.
+
+The **asterisk** sign is used to declare a pointer (the same asterisk that you use for multiplication), however, in this statement the asterisk is being used to designate a variable as a pointer.
+
+Following are valid pointer declarations:
+
+```cpp
+int *ip;  // pointer to an integer
+double *dp;   // pointer to a double
+float *fp;  // pointer to a float
+char *ch;  // pointer to a character
+```
+
+Just like with variables, we give the pointers a name and define the type, to which the pointer points to.
+
+```diff
+! The asterisk sign can be placed next to the data type, or the variable name, or in the middle.
+```
+
+# Using Pointers
+
+Here, we assign the address of a variable to the pointer.
+
+```cpp
+int score = 5;
+int *scorePtr;
+scorePtr = &score;
+
+cout << scorePtr << endl;
+
+//Outputs "0x29fee8"
+```
+
+The code above declares a pointer to an integer called **scorePtr**, and assigns to it the memory location of the **score** variable using the ampersand (address-of) operator.
+
+Now, scorePtr's value is the memory location of score.
